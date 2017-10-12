@@ -1,0 +1,28 @@
+@mixin spr_img_2x($important:null){
+    @if $important {
+        $important : unquote('!important');
+    }
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -999px;
+    background-image: url('/dist/assets/img/spr_img_2x.png') $important;
+    background-repeat: no-repeat;
+    content: '';
+}
+
+$spr_img_2x: (
+    spritesheet_name: spr_img_2x,
+    total_width: 40px,
+    total_height: 40px,
+    total_width_retina: 20px,
+    total_height_retina: 20px,
+    gnb_menu: (
+        offset_x: 0,
+        offset_y: 0,
+        width: 40px,
+        height: 40px,
+        offset_x_retina: 0,
+        offset_y_retina: 0,
+        width_retina: 20px,
+        height_retina: 20px),
+);
